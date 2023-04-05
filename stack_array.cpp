@@ -50,6 +50,11 @@ void pop(){
     }
 }
 
+//Stack Top()- To find what is at the top of the stack.
+void StackTop(){
+    cout << stack[top];
+}
+
 //Display()- To print elements in the stack.
 void display(){
     if (isEmpty(stack)){
