@@ -5,8 +5,8 @@ using namespace std;
 using namespace std::chrono;
 
 int top = -1;
-const int size =100;
-int stack[size];
+int size ;
+int *stack; //Allocate space for the stack.
 
 // isEmpty()- To check whether a stack is empty or not.
 bool isEmpty(int stack[]){
@@ -68,6 +68,13 @@ void display(){
 }
 
 int main(){
+    // get stack size from user input
+    cout << "Enter stack size: ";
+    cin >> size;
+
+    // allocate memory for the stack
+    stack = new int[size];
+    
     auto start = high_resolution_clock::now();
         push(8);
         push(10);
